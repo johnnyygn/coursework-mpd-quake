@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="318dp"
+                android:layout_height="391dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="From"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/startDate"
+                    android:layout_width="318dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="date" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/endDate"
+                    android:layout_width="318dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="date" />
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="318dp"
+                    android:layout_height="65dp"
+                    android:text="Find"
+                    app:rippleColor="#EC0000" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:foregroundGravity="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/eastLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Eastern"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/eastFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/westLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Western"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/westFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/northLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Northern"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/northFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/southLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Southern"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/southFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/biggestLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Highest Magnitude"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/bigFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/deepestLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Deepest Quake"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/deepFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shallowestLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Most Shallow Quake"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/shallowFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/noQuakes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="There are zero erthquakes found."
+                android:textSize="30sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

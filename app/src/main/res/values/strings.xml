@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EQuakeStarterCode</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_no_quake_data_was_found">Error: No Quake Data was Found</string>
+    <string name="depth">Depth:</string>
+    <string name="magnitude">Magnitude:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="pubish_date">Pubish Date:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="catagory">Catagory:</string>
+    <string name="link">Link</string>
+</resources>
