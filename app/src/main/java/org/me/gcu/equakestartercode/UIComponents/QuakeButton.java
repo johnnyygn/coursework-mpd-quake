@@ -14,7 +14,7 @@ import com.google.android.material.button.MaterialButton;
 import org.me.gcu.equakestartercode.activites.QuakeActivity;
 import org.me.gcu.equakestartercode.models.Item;
 
-//Reusable Button for displaying Quakes - allows Press for more information
+
 public class QuakeButton extends MaterialButton implements View.OnClickListener {
     Item item;
 
@@ -50,7 +50,7 @@ public class QuakeButton extends MaterialButton implements View.OnClickListener 
         }
     }
 
-    //OnClick opens QuakeActivity on top of main activity and fragment with that quakes information
+   
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getContext(), QuakeActivity.class);
