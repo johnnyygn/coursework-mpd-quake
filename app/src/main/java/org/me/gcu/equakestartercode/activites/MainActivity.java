@@ -41,20 +41,16 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(this::onNavigationItemSelected);
 
-        //itemviewmodel shared amongst fragments
+       
         itemViewModel = new ItemViewModel();
         itemViewModel.getItems();
 
-        //Get fragments. Will be null on first load.
+       
         homeFragment = (HomeFragment) getSupportFragmentManager().findFragmentByTag("Home");
         searchFragment = (SearchFragment) getSupportFragmentManager().findFragmentByTag("Search");
         mapFragment = (MapFragment) getSupportFragmentManager().findFragmentByTag("Map");
 
-        //If
-        //First load of Activity create all fragments and them to activity and hide.
-        //Make current tag Home fragment tag and show Home Fragment.
-        //Else (such as re-orientating)
-        //Check currentFragment - (from savedInstanceState) - show corresponding fragment and hide remaining.
+      
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         if(savedInstanceState == null){
                 homeFragment = new HomeFragment();
@@ -96,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         }
         fragmentTransaction.commit();
 
-        //load new items every 10 minuets
+    
         final Handler handler = new Handler();
         Timer timer = new Timer();
         TimerTask doAsynchronousTask = new TimerTask() {
@@ -114,20 +110,18 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         timer.schedule(doAsynchronousTask, 0, 400000);
     }
 
-    //Saves currentFragment tag when re-orientating
+ 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("current" , currentFragment);
     }
 
-    //On bottomNav pressed
+  
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         item.setChecked(true);
-        //Checks what bottom nav button has been pressed
-        //If that button represents current fragment do nothing
-        //Else hide current fragment , show fragment button represents
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if(bottomNavigationView.getMenu().getItem(0).isChecked()) {
             if(currentFragment != homeFragment.getTag()) {
@@ -157,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         return false;
     }
 
-    //On back press go backward thorough fragment stack
+   
     @Override
     public void onBackPressed() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0 ){
@@ -167,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         }
     }
 
-    //On back press ensure that bottom nav setChecked correlates to current fragment.
+  
     @Override
     public void bottomNavMoved(String id) {
         if(id == "Home")
